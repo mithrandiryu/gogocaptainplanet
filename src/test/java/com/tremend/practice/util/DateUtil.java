@@ -10,6 +10,8 @@ public class DateUtil {
         throw new IllegalStateException("Utility class");
     }
 
+
+
     public static long getNowTimeInEpochSecondFormat(){
         Instant instant = Instant.now();
         return instant.getEpochSecond();

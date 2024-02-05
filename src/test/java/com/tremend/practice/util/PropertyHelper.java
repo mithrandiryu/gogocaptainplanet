@@ -10,6 +10,8 @@ public class PropertyHelper {
             throw new IllegalStateException("Utility class");
         }
 
+
+
         public static String getWebDriverBaseUrl(){
             EnvironmentVariables variables = SystemEnvironmentVariables.createEnvironmentVariables();
             return EnvironmentSpecificConfiguration.from(variables).getProperty("webdriver.base.url");
