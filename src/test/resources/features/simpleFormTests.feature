@@ -6,6 +6,8 @@ Feature: Input Forms
     Given that the user is on Simple form page
     When the user submits a value in the input field
     Then that values is displayed
+    Given that on
+
 
 
   @simpleForm
