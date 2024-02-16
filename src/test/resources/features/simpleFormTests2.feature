@@ -5,3 +5,9 @@ Feature: Simple Form
     Given that the user is on SimpleForm page
     When the user clicks the show message button with an empty file
     Then the displayed label is blank
+
+  @simpleForm @regression @smoke @sanity
+  Scenario: As a user I want the output of the displayed label to match the input field
+    Given that the user is on SimpleForm page
+    When the user clicks the show message button after typing in the desired message
+    Then the displayed label matches the typed in message

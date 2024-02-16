@@ -15,6 +15,9 @@ public class SimpleFormSteps {
     }
 
     @Step
+    public void user_inputs_keys_into_input_field(String value) {simpleFormPage.setInputField(value);}
+
+    @Step
     public void user_clears_the_simple_form_input_field(){
         simpleFormPage.clearInputField();
     }
