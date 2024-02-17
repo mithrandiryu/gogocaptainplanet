@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class SimpleFormPage extends PageObject {
 
-    // ============ WebElemends
+    // ============ WebElements
 
     @FindBy(id = "user-message")
     private WebElementFacade inputField;
