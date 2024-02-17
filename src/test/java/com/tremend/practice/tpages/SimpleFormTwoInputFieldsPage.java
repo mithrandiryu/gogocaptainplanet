@@ -34,13 +34,13 @@ public class SimpleFormTwoInputFieldsPage extends PageObject {
         getTotalButton.click();
     }
 
-    public Integer showGetTotal(){
-
+    public Integer showGetTotalValueInteger(){
         String showValue = getTotalResult.getText();
-        Integer i = Integer.valueOf(showValue);
-        return i;
+        return Integer.valueOf(showValue);
+    }
 
-        //return getTotalResult.getText();
+    public String showGetTotalValueString(){
+        return getTotalResult.getText();
     }
 
 }
