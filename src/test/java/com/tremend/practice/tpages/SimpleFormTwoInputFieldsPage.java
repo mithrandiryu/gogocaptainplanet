@@ -22,18 +22,25 @@ public class SimpleFormTwoInputFieldsPage extends PageObject {
         getDriver().navigate().to("https://demo.seleniumeasy.com/basic-first-form-demo.html");
     }
 
-    public void setInputField(String valueA, String valueB){
-        inputFieldA.sendKeys(valueA);
-        inputFieldB.sendKeys(valueB);
+    public void setInputFieldA(String value){
+        inputFieldA.sendKeys(value);
+    }
+
+    public void setInputFieldB(String value){
+        inputFieldB.sendKeys(value);
     }
 
     public void clickGetTotalBtn(){
         getTotalButton.click();
     }
 
-    public String showGetTotal(){
-        return getTotalResult.getText();
-    }
+    public Integer showGetTotal(){
 
+        String showValue = getTotalResult.getText();
+        Integer i = Integer.valueOf(showValue);
+        return i;
+
+        //return getTotalResult.getText();
+    }
 
 }

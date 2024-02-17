@@ -2,7 +2,6 @@ package com.tremend.practice.steps;
 
 import com.tremend.practice.tpages.SimpleFormPage;
 import net.thucydides.core.annotations.Step;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SimpleFormSteps {

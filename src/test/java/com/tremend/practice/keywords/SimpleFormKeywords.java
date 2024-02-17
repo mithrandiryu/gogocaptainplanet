@@ -46,4 +46,5 @@ public class SimpleFormKeywords {
     public void theDisplayedLabelMatchesTheTypedInMessage() {
         simpleFormSteps.assert_that_the_field_has_this_value("Happy path");
     }
+
 }
