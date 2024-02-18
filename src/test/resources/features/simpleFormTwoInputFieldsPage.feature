@@ -26,7 +26,7 @@ Feature: Simple form sum of two input fields
     Then the output displayed is NaN
 
 
-  Scenario Outline: As a user I want the output of the displayed result to be NaN when an invalid value is provided
+  Scenario Outline: As a user I want to get the sum of two values
     Given that the user navigates to SimpleForm page
     When the user submits "<value1>" and "<value2>"
     Then the output "<valueTotal>" is displayed
