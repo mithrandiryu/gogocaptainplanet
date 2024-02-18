@@ -9,7 +9,7 @@ public class SimpleFormTwoInputFieldsSteps {
 
     SimpleFormTwoInputFieldsPage simpleFormTwoInputFieldsPage;
 
-    String invalidInput = "NaN";
+    private String invalidInput = "NaN";
 
     @Step
     public void user_navigates_to_simple_form_page() {
@@ -38,6 +38,10 @@ public class SimpleFormTwoInputFieldsSteps {
 
     public void assert_that_get_total_show_value(Integer value) {
         assertThat(simpleFormTwoInputFieldsPage.showGetTotalValueString()).as("Get Total displayed value is").isEqualTo(invalidInput);
+    }
+
+        public void assert_get_total_value(String value){
+        assertThat(simpleFormTwoInputFieldsPage.showGetTotalValueString()).as("Get Total displayed value is").isEqualTo(value);
     }
 
 }

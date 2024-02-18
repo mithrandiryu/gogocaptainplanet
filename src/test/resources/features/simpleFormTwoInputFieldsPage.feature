@@ -24,3 +24,19 @@ Feature: Simple form sum of two input fields
     Given that the user navigates to SimpleForm page
     When the user submits an invalid value in one of the fields
     Then the output displayed is NaN
+
+
+  Scenario Outline: As a user I want the output of the displayed result to be NaN when an invalid value is provided
+    Given that the user navigates to SimpleForm page
+    When the user submits "<value1>" and "<value2>"
+    Then the output "<valueTotal>" is displayed
+    Examples:
+      | value1    |  value2   | valueTotal|
+      | 2         | 3         | 5         |
+      | 1         | 9         | 10        |
+      |-1         |-2         |-3         |
+      | a         | b         | NaN       |
+      | a         | 2         | NaN       |
+      |           |           | NaN       |
+      |1          |           | NaN       |
+      |1.2        |2.5        | 3         |
