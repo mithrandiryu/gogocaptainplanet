@@ -58,6 +58,7 @@
     </properties>
 
     <dependencies>
+
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

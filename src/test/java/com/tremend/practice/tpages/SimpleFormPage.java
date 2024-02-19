@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 
 public class SimpleFormPage extends PageObject {
 
-    // ============ WebElemends
+
+    /** ===== WEB ELEMENTS ==== */
+
 
     @FindBy(id = "user-message")
     private WebElementFacade inputField;
@@ -19,7 +21,7 @@ public class SimpleFormPage extends PageObject {
     private WebElementFacade showMessageLabel;
 
 
-    // ===== Methods
+    /** ==== METHODS ==== */
 
     public void navigateToSimpleFormPage(){
         getDriver().navigate().to("https://demo.seleniumeasy.com/basic-first-form-demo.html");
