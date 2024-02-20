@@ -13,7 +13,8 @@ public class SimpleFormKeywords {
     private SimpleFormSteps simpleFormSteps;
 
 
-    /** ===== STEPS FOR GIVEN ===== */
+    /**
+     * ===== STEPS FOR GIVEN =====*/
 
     @Given("that the user is on SimpleForm page")
     public void thatTheUserIsOnSimpleFormPage() {
@@ -21,7 +22,9 @@ public class SimpleFormKeywords {
     }
 
 
-    /** ===== STEPS FOR WHEN ===== */
+    /**
+     * ===== STEPS FOR WHEN =====
+     */
 
     @When("the user clicks the show message button with an empty file")
     public void theUserClicksTheShowMessageButtonWithAnEmptyFile() {
@@ -36,13 +39,14 @@ public class SimpleFormKeywords {
         simpleFormSteps.user_click_the_submit_button();
     }
 
-    /** ===== STEPS FOR THEN ===== */
+    /**
+     * ===== STEPS FOR THEN =====
+     */
 
     @Then("the displayed label is blank")
     public void theDisplayedLabelIsBlank() {
         simpleFormSteps.assert_that_element_is_displayed_value_is(false);
     }
-
 
 
     @Then("The displayed label should match the entered message.")
