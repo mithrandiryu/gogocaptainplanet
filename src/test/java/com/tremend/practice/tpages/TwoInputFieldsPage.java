@@ -41,7 +41,7 @@ public class TwoInputFieldsPage extends PageObject {
     }
 
     public void setInputFieldB(String value) {
-        inputFieldA.sendKeys(value);
+        inputFieldB.sendKeys(value);
     }
 
     public void clickGetTotalBtn() {
@@ -53,7 +53,4 @@ public class TwoInputFieldsPage extends PageObject {
         return Integer.valueOf(showValue);
     }
 
-    public String showGetTotalValueString() {
-        return getTotalValue.getText();
-    }
 }

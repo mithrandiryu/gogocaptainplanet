@@ -26,11 +26,24 @@ public class TwoInputFieldsKeywords {
         twoInputFieldsSteps.user_click_get_total_button();
     }
 
+    @When("the user inputs both values as negative, triggering the system to calculate the total")
+    public void theUserInputsBothValuesAsNegativeTriggeringTheSystemToCalculateTheTotal() {
+        twoInputFieldsSteps.user_insert_keys_into_input_field_a("-3");
+        twoInputFieldsSteps.user_insert_keys_into_input_field_b("-5");
+        twoInputFieldsSteps.user_click_get_total_button();
+    }
 
     /** ==== STEPS FOR THEN  ==== */
     @Then("the calculated sum of the values is showcased")
     public void theCalculatedSumOfTheValuesIsShowcased() {
         twoInputFieldsSteps.assert_that_get_total_show_value(4, 1);
+    }
+
+
+
+    @Then("the calculated sum of the negative values is showcased")
+    public void theCalculatedSumOfTheNegativeValuesIsShowcased() {
+        twoInputFieldsSteps.assert_that_get_total_show_value(-3, -5);
     }
 }
 

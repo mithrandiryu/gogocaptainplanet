@@ -5,7 +5,8 @@ import com.tremend.practice.tpages.TwoInputFieldsPage;
 import net.thucydides.core.annotations.Step;
 import org.assertj.core.api.Assertions;
 
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 
 public class TwoInputFieldsSteps {
 
@@ -34,7 +35,7 @@ public class TwoInputFieldsSteps {
     }
 
     public void assert_that_get_total_show_value(Integer valueA, Integer valueB) {
-            Assertions.assertThat(twoInputFieldsPage.showGetTotalValueString() ).as("Get Total Sum displayed value is ").isEqualTo(valueA + valueB);
+            assertThat(twoInputFieldsPage.showGetTotalValueInteger() ).as("Get Total Sum displayed value is ").isEqualTo(valueA + valueB);
     }
 
 
