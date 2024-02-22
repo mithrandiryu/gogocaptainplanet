@@ -17,8 +17,8 @@ Feature: Input Forms
     Then the sum "<valueSum>" is displayed
 
     Examples:
-      | valueA    |  valueB   | valueSum |
-      | 1         | 2         | 3        |
-      | 2         | 3         | 5        |
-      |-1         |-2         |-3        |
-      | a         | b         | NaN      |
+      | valueX    |  valueY   | value |
+      | 1         | 2         | 3     |
+      | 2         | 3         | 5     |
+      |-1         |-2         |-3     |
+      | a         | b         | NaN   |

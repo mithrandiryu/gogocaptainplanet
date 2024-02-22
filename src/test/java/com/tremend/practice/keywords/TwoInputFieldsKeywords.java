@@ -33,6 +33,14 @@ public class TwoInputFieldsKeywords {
         twoInputFieldsSteps.user_click_get_total_button();
     }
 
+
+    @When("the user send a value just in one field")
+    public void theUserSendAValueJustInOneField() {
+        twoInputFieldsSteps.user_insert_keys_into_input_field_a("8");
+        twoInputFieldsSteps.user_click_get_total_button();
+    }
+
+
     /** ==== STEPS FOR THEN  ==== */
     @Then("the calculated sum of the values is showcased")
     public void theCalculatedSumOfTheValuesIsShowcased() {
@@ -45,5 +53,12 @@ public class TwoInputFieldsKeywords {
     public void theCalculatedSumOfTheNegativeValuesIsShowcased() {
         twoInputFieldsSteps.assert_that_get_total_show_value(-3, -5);
     }
+
+    @Then("the result displayed will be Nan\\(notAnumber)")
+    public void theResultDisplayedWillBeNanNotAnumber() {
+        twoInputFieldsSteps.assert_that_get_total_show_value(8);
+    }
+
+
 }
 

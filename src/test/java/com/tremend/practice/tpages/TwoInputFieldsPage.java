@@ -53,4 +53,7 @@ public class TwoInputFieldsPage extends PageObject {
         return Integer.valueOf(showValue);
     }
 
+    public String showGetTotalValueString() {
+        return getTotalValue.getText();
+    }
 }

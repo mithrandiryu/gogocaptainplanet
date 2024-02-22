@@ -19,6 +19,7 @@ public class TwoInputFieldsSteps {
         twoInputFieldsPage.navigateToSimpleFormPage();
     }
 
+
     @Step
     public void user_insert_keys_into_input_field_a(String value) {
         twoInputFieldsPage.setInputFieldA(value);
@@ -29,15 +30,21 @@ public class TwoInputFieldsSteps {
         twoInputFieldsPage.setInputFieldB(value);
     }
 
+
     @Step
     public void user_click_get_total_button() {
         twoInputFieldsPage.clickGetTotalBtn();
     }
 
+
+    @Step
     public void assert_that_get_total_show_value(Integer valueA, Integer valueB) {
             assertThat(twoInputFieldsPage.showGetTotalValueInteger() ).as("Get Total Sum displayed value is ").isEqualTo(valueA + valueB);
     }
 
-
+    @Step
+    public void assert_that_get_total_show_value(Integer value) {
+        assertThat(twoInputFieldsPage.showGetTotalValueString()).as("Get Total displayed value is").isEqualTo(invalidInput);
+    }
 
 }
