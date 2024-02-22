@@ -29,4 +29,4 @@ Feature: Two Input Fields into Simple form
 
     Examples:
       | valueA | valueB | valueSum |
-      | 8      |        | non   |
+      | 8      |        | Nan  |
