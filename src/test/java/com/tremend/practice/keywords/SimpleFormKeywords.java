@@ -8,13 +8,12 @@ import net.thucydides.core.annotations.Steps;
 
 public class SimpleFormKeywords {
 
-
     @Steps
     private SimpleFormSteps simpleFormSteps;
 
-
     /**
-     * ===== STEPS FOR GIVEN =====*/
+     * STEPS FOR GIVEN
+     */
 
     @Given("that the user is on SimpleForm page")
     public void thatTheUserIsOnSimpleFormPage() {

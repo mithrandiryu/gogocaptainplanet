@@ -34,6 +34,8 @@ public class TwoInputFieldsPage extends PageObject {
 
     public void navigateToSimpleFormPage() {
         getDriver().navigate().to("https://demo.seleniumeasy.com/basic-first-form-demo.html");
+
+
     }
 
     public void setInputFieldA(String value) {
@@ -48,9 +50,8 @@ public class TwoInputFieldsPage extends PageObject {
         getTotalButton.click();
     }
 
-    public Integer showGetTotalValueInteger() {
-        String showValue = getTotalValue.getText();
-        return Integer.valueOf(showValue);
+    public int showGetTotalValueInteger() {
+        return Integer.parseInt(getTotalValue.getText());
     }
 
     public String showGetTotalValueString() {
