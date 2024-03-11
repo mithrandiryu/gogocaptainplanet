@@ -2,6 +2,7 @@ package com.tremend.practice.keywords;
 
 import com.tremend.practice.steps.SimpleFormSteps;
 import com.tremend.practice.steps.SimpleFormTwoInputFieldsSteps;
+import com.tremend.practice.util.constants.framework.TestConstant;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -64,7 +65,7 @@ public class SimpleFormTwoInputFieldsKeywords {
 
     @Then("the output displayed is NaN")
     public void theOutputDisplayedIsNaN() {
-        simpleFormTwoInputFieldsSteps.assert_that_get_total_show_value(1);
+        simpleFormTwoInputFieldsSteps.assert_that_get_total_show_value(TestConstant.NAN);
     }
 
     @Then("the sum of the negative values is displayed")
@@ -77,11 +78,5 @@ public class SimpleFormTwoInputFieldsKeywords {
         simpleFormTwoInputFieldsSteps.user_inputs_keys_into_input_field_a(arg0);
         simpleFormTwoInputFieldsSteps.user_inputs_keys_into_input_field_b(arg1);
         simpleFormTwoInputFieldsSteps.user_clicks_get_total_btn();
-    }
-
-
-    @Then("the output {string} is displayed")
-    public void theOutputIsDisplayed(String arg0) {
-        simpleFormTwoInputFieldsSteps.assert_get_total_value(arg0);
     }
 }

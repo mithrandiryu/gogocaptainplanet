@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SimpleFormSteps {
 
-    SimpleFormPage simpleFormPage;
+    private SimpleFormPage simpleFormPage;
 
     @Step
     public void user_navigates_to_simple_form_page(){

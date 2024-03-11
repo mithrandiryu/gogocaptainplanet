@@ -8,7 +8,7 @@ public class TestConstant {
     }
 
 
-
+    public static final String NAN = "NaN";
 
     /**
      * The maximum

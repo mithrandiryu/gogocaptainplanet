@@ -2,14 +2,14 @@ package com.tremend.practice.steps;
 
 import net.thucydides.core.annotations.Step;
 import com.tremend.practice.tpages.SimpleFormTwoInputFieldsPage;
+import org.yecht.Data;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class SimpleFormTwoInputFieldsSteps {
 
-    SimpleFormTwoInputFieldsPage simpleFormTwoInputFieldsPage;
-
-    private String invalidInput = "NaN";
+    private SimpleFormTwoInputFieldsPage simpleFormTwoInputFieldsPage;
 
     @Step
     public void user_navigates_to_simple_form_page() {
@@ -35,12 +35,12 @@ public class SimpleFormTwoInputFieldsSteps {
     public void assert_that_get_total_show_value(Integer value1, Integer value2) {
         assertThat(simpleFormTwoInputFieldsPage.showGetTotalValueInteger()).as("Get Total displayed value is").isEqualTo(value1 + value2);
     }
-
-    public void assert_that_get_total_show_value(Integer value) {
-        assertThat(simpleFormTwoInputFieldsPage.showGetTotalValueString()).as("Get Total displayed value is").isEqualTo(invalidInput);
+    @Step
+    public void assert_that_get_total_show_value(String value) {
+        assertThat(simpleFormTwoInputFieldsPage.showGetTotalValueString()).as("Get Total displayed value is").isEqualTo(value);
     }
-
-        public void assert_get_total_value(String value){
+    @Step
+    public void assert_get_total_value(String value){
         assertThat(simpleFormTwoInputFieldsPage.showGetTotalValueString()).as("Get Total displayed value is").isEqualTo(value);
     }
 
