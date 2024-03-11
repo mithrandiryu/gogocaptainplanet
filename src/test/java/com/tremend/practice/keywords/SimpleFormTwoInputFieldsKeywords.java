@@ -79,4 +79,9 @@ public class SimpleFormTwoInputFieldsKeywords {
         simpleFormTwoInputFieldsSteps.user_inputs_keys_into_input_field_b(arg1);
         simpleFormTwoInputFieldsSteps.user_clicks_get_total_btn();
     }
+
+    @Then("the output {string} is displayed")
+    public void theOutputIsDisplayed(String arg0) {
+        simpleFormTwoInputFieldsSteps.assert_get_total_value(arg0);
+    }
 }
