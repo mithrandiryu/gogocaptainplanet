@@ -13,8 +13,8 @@ Feature: Input Forms
   @simpleForm
   Scenario Outline: As a user I want to be able to display the sum of two values
     Given that the user is on Simple form page
-    When the user submits the values "<valueA>" and "<valueB>" in the the two input field
-    Then the sum "<valueSum>" is displayed
+    When the user submits the values "<valueX>" and "<valueY>" in the the two input field
+    Then the sum "<value>" is displayed
 
     Examples:
       | valueX    |  valueY   | value |

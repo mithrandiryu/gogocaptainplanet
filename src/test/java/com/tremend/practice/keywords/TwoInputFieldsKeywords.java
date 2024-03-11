@@ -88,6 +88,9 @@ public class TwoInputFieldsKeywords {
     public void theResultOfTheValuesIsDisplayed() {
         twoInputFieldsSteps.assert_that_get_total_show_value(+1, 1);
     }
-}
+
+
+        }
+
 
 

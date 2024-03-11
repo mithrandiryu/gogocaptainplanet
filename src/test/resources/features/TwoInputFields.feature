@@ -44,8 +44,10 @@ Feature: Two Input Fields into Simple form
 
   Examples:
     | valueA | valueB | valueSum |
-    |  4     |   1    |   5      |
-    | +1     |   1    |   2      |
-    | -3     |  -5    |  -8      |
-    |  8     |        | NaN      |
-    |        |        | NaN      |
+    |    4   |    1   |     5    |
+    |   +1   |    1   |     2    |
+    |   -3   |   -5   |    -8    |
+    |    8   |        |    NaN   |
+    |        |        |    NaN   |
+    |    a   |    0   |    NaN   |
+    |   -10  |    b   |    NaN   |
