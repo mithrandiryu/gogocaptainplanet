@@ -20,7 +20,7 @@ public class MultipleCheckboxPage extends PageObject {
     private List<WebElementFacade> optionsDisplayed;
 
     @FindBy(id = "check1")
-    private WebElementFacade checkAll;
+    private WebElementFacade clickCheckMarksButton;
 
 
     /**
@@ -33,24 +33,32 @@ public class MultipleCheckboxPage extends PageObject {
 
 
     public void checkAllButton() {
-        checkAll.click();
+        clickCheckMarksButton.click();
     }
 
-    public void allOptionsChecked() {
-//        for (WebElementFacade option : optionsDisplayed) {
-//            Assert.assertTrue(option.isSelected(), "Option is not selected: " + option.getText());
-//        }
 
+    //   public void allOptionsChecked() {
+    //        for (WebElementFacade option : optionsDisplayed) {
+    //            Assert.assertTrue(option.isSelected(), "Option is not selected: " + option.getText());
+    //        }
+    //    Creating a method with enhanced complexity and broader coverage
+         public void allOptionsChecked() {
         // un set care mapeaza campul optiunii
         Set<Boolean> selected = optionsDisplayed.stream().map(option -> option.isSelected()).collect(Collectors.toSet());
 
         // spune ca setul este gol sau nu
         Assert.assertFalse(selected.isEmpty(),"Set is bot empty");
 
-        // SE DUCE PE SET, IA ITERAROR SI IETRATORUL PRIMUL ELEMENT DIN SET
+        // selectam setul, ia iterator si iteratorul primul element din set
         Assert.assertTrue(selected.iterator().next(),"Checkbox si active");
-        // am un singur element in set
 
-        Assert.assertEquals(1,selected.size(),"");
+        // am un singur element in set
+         Assert.assertEquals(1,selected.size(),"One box is selected");
+    }
+
+    public void allOptionsUnchecked() {
+        for (WebElementFacade option : optionsDisplayed) {
+            Assert.assertFalse(option.isSelected(), "Option should not be selected: " + option.getText());
+        }
     }
 }

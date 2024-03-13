@@ -23,4 +23,7 @@ public class MultipleCheckboxSteps {
     public void user_checks_if_options_are_checked() {
         multipleCheckboxPage.allOptionsChecked();
     }
-}
+
+
+
+    }

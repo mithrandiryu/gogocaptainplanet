@@ -13,13 +13,17 @@ public class MultipleCheckboxKeywords {
     MultipleCheckboxSteps multipleCheckboxSteps;
 
 
-    /**====GIVEN*/
+    /**====GIVEN====*/
 
     @Given("the user is on the multiple Checkbox Demo page")
     public void checkBoxPage() {
         multipleCheckboxSteps.user_navigates_to_check_box_page();
     }
 
+    @And("all options are selected")
+    public void allOptionsAreSelected() {
+        multipleCheckboxSteps.user_checks_if_options_are_checked();
+    }
 
     /**====WHEN====*/
 
@@ -28,6 +32,8 @@ public class MultipleCheckboxKeywords {
         multipleCheckboxSteps.user_click_check_all_button();
     }
 
+
+    /**====THEN=====*/
     @Then("the options are selected")
     public void optionsAreSelected() {
         multipleCheckboxSteps.user_checks_if_options_are_checked();
@@ -35,5 +41,12 @@ public class MultipleCheckboxKeywords {
 
     @And("the button label is updated")
     public void theButtonLabelIsUpdated() {
+      // multipleCheckboxSteps.assert
+
     }
-}
+
+    }
+
+
+
+
