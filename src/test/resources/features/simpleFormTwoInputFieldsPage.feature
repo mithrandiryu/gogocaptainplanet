@@ -1,3 +1,4 @@
+@InputForm @regression
 Feature: Simple form sum of two input fields
 
   Scenario: As a user I want to display the sum of two values

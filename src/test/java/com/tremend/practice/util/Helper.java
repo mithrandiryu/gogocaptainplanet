@@ -1,11 +1,11 @@
 package com.tremend.practice.util;
 
-import com.openhtmltopdf.css.parser.property.PrimitivePropertyBuilders;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.jetbrains.annotations.NotNull;
-
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Helper extends PageObject {
     public void checkBoxIsChecked(String value, WebElementFacade button){
@@ -15,13 +15,12 @@ public class Helper extends PageObject {
             button.click();
         }
     }
-    public List<WebElementFacade> returnWebElementList(List<WebElementFacade> list){
-        return list;
-    }
+    public int getWebElementAttributeIndex(@NotNull List<WebElementFacade> list, String attribute){
+        Map<String, Integer> map = new HashMap<>();
 
-    //    public void checkBoxIsChecked(@NotNull WebElementFacade button) {
-//        if (!button.isSelected()) {
-//            button.click();
-//        }
-//    }
+        for (int index = 0; index < list.size(); index++){
+            map.put(list.get(index).getAttribute("value"), index);
+        }
+        return map.get(attribute);
+    }
 }

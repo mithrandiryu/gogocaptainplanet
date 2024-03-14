@@ -43,7 +43,7 @@ public class MultipleCheckBoxSteps {
             List<WebElementFacade> allCheckBoxes = multipleCheckboxPage.checkBoxOptionsListReturn();
 
             for (WebElementFacade option : allCheckBoxes){
-                assertThat(option.isSelected()).as("bla bla").isTrue();
+                assertThat(option.isSelected()).as("Checkbox is ticked").isTrue();
             }
     }
     @Step
@@ -51,12 +51,11 @@ public class MultipleCheckBoxSteps {
             List<WebElementFacade> allCheckBoxes = multipleCheckboxPage.checkBoxOptionsListReturn();
 
             for (WebElementFacade option : allCheckBoxes){
-                assertThat(option.isSelected()).as("bla bla").isFalse();
+                assertThat(option.isSelected()).as("Checkbox is ticked").isFalse();
         }
     }
     @Step
         public void assert_that_button_label(String value){
             assertThat(multipleCheckboxPage.returnWebElementAttribute()).as("Button label is" + value).isEqualTo(value);
-            //System.out.println(value);
     }
 }
