@@ -8,10 +8,11 @@ import java.util.List;
 import java.util.Map;
 
 public class Helper extends PageObject {
-    public void checkBoxIsChecked(String value, WebElementFacade button){
-        if ("checked".equals(value) && !button.isSelected()){
+    public void checkBoxIsChecked(String checkBoxState, WebElementFacade button){
+
+        if ("checked".equals(checkBoxState) && !button.isSelected()){
             button.click();
-        } else if ("unchecked".equals(value) && button.isSelected()){
+        } else if ("unchecked".equals(checkBoxState) && button.isSelected()){
             button.click();
         }
     }
