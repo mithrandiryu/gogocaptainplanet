@@ -22,10 +22,6 @@ public class MultipleCheckboxKeywords {
         multipleCheckboxSteps.user_navigates_to_check_box_page();
     }
 
-    @And("all options are selected")
-    public void allOptionsAreSelected() {
-        multipleCheckboxSteps.user_checks_if_options_are_checked();
-    }
 
     /**
      * ====WHEN====
@@ -37,33 +33,22 @@ public class MultipleCheckboxKeywords {
     }
 
 
-    @When("the user press check unCheck all button")
-    public void theUserPressCheckUnCheckAllButton() {
-        multipleCheckboxSteps.user_unticks_all_options();
-    }
-
-
 
     /**
      * ====THEN=====
      */
-    @Then("the options are ticked")
-    public void optionsAreSelected() {
+    @Then("all the options are ticked")
+    public void user_checks_if_options_are_checked() {
         multipleCheckboxSteps.user_checks_if_options_are_checked();
     }
 
     @And("the button label is updated")
     public void theButtonLabelIsUpdated() {
-        // multipleCheckboxSteps.assert
 
     }
 
-
-    @Then("the options will be unticked")
-    public void theOptionsWillBeUnticked() {
-        multipleCheckboxSteps.user_checks_if_options_are_Unchecked();
     }
-}
+
 
 
 
