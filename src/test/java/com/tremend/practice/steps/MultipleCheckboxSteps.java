@@ -1,7 +1,10 @@
 package com.tremend.practice.steps;
 
 import com.tremend.practice.tpages.MultipleCheckboxPage;
+
 import net.thucydides.core.annotations.Step;
+
+
 
 
 public class MultipleCheckboxSteps {
@@ -22,8 +25,13 @@ public class MultipleCheckboxSteps {
     @Step
     public void user_checks_if_options_are_checked() {
         multipleCheckboxPage.allOptionsChecked();
-    }
-
-
 
     }
+
+    @Step
+    public void user_unticks_all_options(){
+        multipleCheckboxPage.unCheckAllOptions();
+    }
+
+    }
+

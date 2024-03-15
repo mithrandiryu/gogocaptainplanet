@@ -37,28 +37,40 @@ public class MultipleCheckboxPage extends PageObject {
     }
 
 
-    //   public void allOptionsChecked() {
-    //        for (WebElementFacade option : optionsDisplayed) {
-    //            Assert.assertTrue(option.isSelected(), "Option is not selected: " + option.getText());
-    //        }
-    //    Creating a method with enhanced complexity and broader coverage
-         public void allOptionsChecked() {
+    public List<WebElementFacade> getAllCheckBoxesReturn(){
+        return optionsDisplayed;
+    }
+
+    //    Metoda de mai jos verifica daca optiunile sunt bifate
+    public void allOptionsChecked() {
         // un set care mapeaza campul optiunii
         Set<Boolean> selected = optionsDisplayed.stream().map(option -> option.isSelected()).collect(Collectors.toSet());
 
-        // spune ca setul este gol sau nu
-        Assert.assertFalse(selected.isEmpty(),"Set is bot empty");
+        // ne spune ca setul este gol sau nu
+        Assert.assertFalse(selected.isEmpty(),"Set is not empty");
 
         // selectam setul, ia iterator si iteratorul primul element din set
         Assert.assertTrue(selected.iterator().next(),"Checkbox si active");
 
         // am un singur element in set
-         Assert.assertEquals(1,selected.size(),"One box is selected");
+        Assert.assertEquals(1,selected.size(),"One box is selected");
     }
 
-    public void allOptionsUnchecked() {
+    // I will create two methods for this step
+   /* public void allOptionsChecked() {
+
         for (WebElementFacade option : optionsDisplayed) {
-            Assert.assertFalse(option.isSelected(), "Option should not be selected: " + option.getText());
+            Assert.assertTrue(option.isSelected(), "Option is selected: " + option.getText());
         }
+    }*/
+
+    public void unCheckAllOptions(){
+        clickCheckMarksButton.click();
+
     }
-}
+    public void user_checks_if_options_are_Unchecked(){
+
+        for(WebElementFacade option : optionsDisplayed){
+            Assert.assertFalse(option.isSelected(), "Option is ticked: " + option.getText());
+        }
+}}
