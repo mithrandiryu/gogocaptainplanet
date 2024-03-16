@@ -27,6 +27,12 @@ public class MultipleCheckboxSteps {
 
 
     @Step
+    public void user_click_unCheck_all_button() {
+        multipleCheckboxPage.doUndoOptions();
+    }
+
+
+    @Step
     public void user_checks_if_options_are_checked() {
         List<WebElementFacade> radioButtons = multipleCheckboxPage.optionsListReturn();
 
@@ -44,27 +50,24 @@ public class MultipleCheckboxSteps {
     }
 
     @Step
-    public void user_click_unCheck_all_button() {
-     multipleCheckboxPage.doUndoOptions();
-    }
-
-
     public void user_checks_if_options_are_unChecked() {
         List<WebElementFacade> radioButtons = multipleCheckboxPage.optionsListReturn();
-
-        // Create a boolean flag to track if any option is not checked
-        boolean allOptionsChecked = true;
-
+        boolean allOptionsChecked = false;
         for (WebElementFacade option : radioButtons) {
-            // If any option is not selected, set the flag to false and break the loop
             if (!option.isSelected()) {
-                allOptionsChecked = false;
+                allOptionsChecked = true;
                 break;
             }
         }
 
-    }}
+    }
 
+    @Step
+    public void user_marks_an_option(int value){
+        multipleCheckboxPage.marksAnOption(value);
+    }
+
+}
 
 
 

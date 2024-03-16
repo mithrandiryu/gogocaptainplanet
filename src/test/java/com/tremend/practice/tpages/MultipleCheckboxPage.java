@@ -46,5 +46,8 @@ public class MultipleCheckboxPage extends PageObject {
         clickCheckMarksButton.click();
     }
 
+    public void marksAnOption(int value){
+        radioButtonsHelper.clickCheckMarksButton("checked", optionsDisplayed.get(value));
+    }
 
 }

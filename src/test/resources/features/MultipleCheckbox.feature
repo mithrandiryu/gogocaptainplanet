@@ -16,3 +16,16 @@ Feature: Multiple Checkbox Demo
     When  the user press check unCheck all button
     Then  the options will be unticked
     And   the button label is updated
+
+    @Options @Regression
+    Scenario Outline: As a user I want to tick checkboxes
+        Given the user is on the multiple Checkbox Demo page
+        When  the user marks an option displayed <int>
+        Then  all <int> checkboxes are marked
+
+        Examples:
+            |     int      |
+            |      1       |
+            |      2       |
+            |      3       |
+            |      4       |

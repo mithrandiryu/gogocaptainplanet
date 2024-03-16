@@ -42,7 +42,11 @@ public class MultipleCheckboxKeywords {
         multipleCheckboxSteps.user_click_unCheck_all_button();
     }
 
-
+    // Scenario Outline
+    @When("the user marks an option displayed {int}")
+    public void theUserTicksAllOptionCheckboxes(int arg0) {
+        multipleCheckboxSteps.user_marks_an_option(1);
+    }
 
     /**
      * ====THEN=====
@@ -61,6 +65,13 @@ public class MultipleCheckboxKeywords {
     @Then("the options will be unticked")
     public void theOptionsWillBeUnticked() {
         multipleCheckboxSteps.user_checks_if_options_are_unChecked();
+    }
+
+
+    @Then("all {int} checkboxes are marked")
+    public void allCheckboxesAreMarked(int arg0) {
+
+
     }
 }
 
