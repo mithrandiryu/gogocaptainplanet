@@ -41,11 +41,34 @@ public class MultipleCheckboxSteps {
             }
         }
 
+    }
+
+    @Step
+    public void user_click_unCheck_all_button() {
+     multipleCheckboxPage.doUndoOptions();
+    }
+
+
+    public void user_checks_if_options_are_unChecked() {
+        List<WebElementFacade> radioButtons = multipleCheckboxPage.optionsListReturn();
+
+        // Create a boolean flag to track if any option is not checked
+        boolean allOptionsChecked = true;
+
+        for (WebElementFacade option : radioButtons) {
+            // If any option is not selected, set the flag to false and break the loop
+            if (!option.isSelected()) {
+                allOptionsChecked = false;
+                break;
+            }
+        }
+
     }}
 
 
 
-//    // un set care mapeaza campul optiunii
+
+//    // O metoda similara cu cea de mai sus, dar care foloseste "stream"
 //            Set<Boolean> selected = optionsDisplayed.stream().map(option -> option.isSelected()).collect(Collectors.toSet());
 //
 //            // ne spune ca setul este gol sau nu

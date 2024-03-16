@@ -42,7 +42,9 @@ public class MultipleCheckboxPage extends PageObject {
         return optionsDisplayed;
     }
 
-
+    public void doUndoOptions(){
+        clickCheckMarksButton.click();
+    }
 
 
 }
