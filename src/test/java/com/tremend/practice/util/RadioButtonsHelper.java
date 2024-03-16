@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
    // Metoda verifica cand radio button trebuie sa fie bifat  avand valorile
    // Verifice statusul radio button
-   // Daca este statusul asteptat este diferit de starea curenta face click pe radio
+   // Daca este statusul asteptat este diferit de starea curenta face click pe radio button
    // pentru a-si schimba starea
 
     public class RadioButtonsHelper extends PageObject {
