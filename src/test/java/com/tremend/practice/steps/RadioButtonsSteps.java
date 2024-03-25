@@ -25,16 +25,14 @@ public class RadioButtonsSteps {
     }
 
     @Step
-    public void user_checks_that_the_sex_button_is_selected(String sex) {
-        assertThat(radioButtonsPage.isSexRadioButtonChecked(sex)).as("Radio button is checked").isTrue();
-
+    public void user_clicks_get_values_button() {
+        radioButtonsPage.clickRetrieveDataButton();
     }
 
     @Step
-    public void user_checks_that_the_agr_group_is_selected(String ageGroup) {
-        assertThat(radioButtonsPage.isAgeGroupButtonChecked(ageGroup)).as("Radio button is checked").isTrue();
+    public void verify_retrieved_outcome(String outcomeValue) {
+        assertThat(radioButtonsPage.getOutcomeText()).isEqualTo(outcomeValue);
     }
-
-
-
 }
+
+

@@ -30,9 +30,11 @@ public class RadioButtonsKeywords {
 
     @And("The user clicks on the Get Values button")
     public void theUserClicksOnTheGetValuesButton() {
+        radioButtonsSteps.user_clicks_get_values_button();
     }
 
     @Then("The system retrieves  {string}")
-    public void theSystemRetrieves(String arg0, String arg1) {
+    public void theSystemRetrieves(String outcomeValue) {
+        radioButtonsSteps.verify_retrieved_outcome(outcomeValue);
     }
 }

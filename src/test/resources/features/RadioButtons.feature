@@ -9,5 +9,5 @@ Feature: Radio Buttons
   Then  The system retrieves  "<outcomeValue>"
 
     Examples:
-      | sex  | ageGroup | outcomeValue              |
-      | Male | 0 - 5    | sex: Male / ageGroup: 0-5 |
+      | sex  | ageGroup | outcomeValue                 |
+      | Male | 0 - 5    | Sex : Male\nAge group: 0 - 5 |
