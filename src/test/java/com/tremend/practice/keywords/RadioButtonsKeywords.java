@@ -25,6 +25,8 @@ public class RadioButtonsKeywords {
     public void theUserSelectsSexAndAgeGroup(String sex, String ageGroup) {
         radioButtonsSteps.user_clicks_sex_button(sex);
         radioButtonsSteps.user_clicks_age_group_button(ageGroup);
+        // added in additional
+        radioButtonsSteps.user_clicks_get_values_button();
 
     }
 
@@ -33,8 +35,9 @@ public class RadioButtonsKeywords {
         radioButtonsSteps.user_clicks_get_values_button();
     }
 
-    @Then("The system retrieves  {string}")
-    public void theSystemRetrieves(String outcomeValue) {
-        radioButtonsSteps.verify_retrieved_outcome(outcomeValue);
+
+    @Then("The system retrieves  {string} and {string}")
+    public void theSystemRetrievesAnd(String sexValue, String ageGroupValue){
+        radioButtonsSteps.verify_retrieved_outcome(sexValue, ageGroupValue);
     }
 }

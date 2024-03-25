@@ -3,6 +3,8 @@ package com.tremend.practice.steps;
 import com.tremend.practice.tpages.RadioButtonsPage;
 import net.thucydides.core.annotations.Step;
 
+import java.util.regex.Pattern;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class RadioButtonsSteps {
@@ -30,9 +32,15 @@ public class RadioButtonsSteps {
     }
 
     @Step
-    public void verify_retrieved_outcome(String outcomeValue) {
-        assertThat(radioButtonsPage.getOutcomeText()).isEqualTo(outcomeValue);
+    public void verify_retrieved_outcome(String sexValue, String ageGroupValue) {
+        String outcomeText = radioButtonsPage.getOutcomeText();
+
+        // Verify sexValue and ageGroupValue separately
+        assertThat(outcomeText).contains("Sex : " + sexValue.replaceAll("^Sex : ", ""));
+        assertThat(outcomeText).contains("Age group: " + ageGroupValue.replaceAll("^Age group: ", ""));
     }
-}
+    }
+
+
 
 
