@@ -2,7 +2,7 @@ Feature: Multiple Checkbox Demo
 
 
     @Options @Regression
-    Scenario Outline: As a user I want to tick checkboxes
+    Scenario Outline: As a user I should be able to tick checkboxes
         Given the user is on the multiple Checkbox Demo page
         When  the user marks an option displayed <int>
         Then  all <int> checkboxes are marked
