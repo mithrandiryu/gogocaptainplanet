@@ -25,7 +25,6 @@ public class RadioButtonsKeywords {
     public void theUserSelectsSexAndAgeGroup(String sex, String ageGroup) {
         radioButtonsSteps.user_clicks_sex_button(sex);
         radioButtonsSteps.user_clicks_age_group_button(ageGroup);
-        // added in additional
         radioButtonsSteps.user_clicks_get_values_button();
 
     }

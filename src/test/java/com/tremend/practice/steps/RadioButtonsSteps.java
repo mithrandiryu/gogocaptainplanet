@@ -34,7 +34,6 @@ public class RadioButtonsSteps {
     @Step
     public void verify_retrieved_outcome(String sexValue, String ageGroupValue) {
         String outcomeText = radioButtonsPage.getOutcomeText();
-
         // Verify sexValue and ageGroupValue separately
         assertThat(outcomeText).contains("Sex : " + sexValue.replaceAll("^Sex : ", ""));
         assertThat(outcomeText).contains("Age group: " + ageGroupValue.replaceAll("^Age group: ", ""));
