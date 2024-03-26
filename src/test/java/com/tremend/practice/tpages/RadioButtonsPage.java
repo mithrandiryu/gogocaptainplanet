@@ -53,8 +53,8 @@ public class RadioButtonsPage extends PageObject {
          if (index != -1) {
              RadioButtonsHelper.clickCheckMarksButton("checked", ageGroupOptions.get(index));
          } else {
-             // Handle the case where the gender option is not found
-             System.out.println("Gender option not found: " + ageGroup);
+             // Handle the case where the age group is not found
+             System.out.println("Age Group option not found: " + ageGroup);
          }
      }
             public void clickRetrieveDataButton () {

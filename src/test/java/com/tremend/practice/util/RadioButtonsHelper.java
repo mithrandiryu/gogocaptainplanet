@@ -7,12 +7,10 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 
-   // Metoda verifica cand radio button trebuie sa fie bifat  avand valorile
+   // Metoda verifica atunci cand radio button trebuie sa fie bifat  avand valorile
    // Verifice statusul radio button
    // Daca este statusul asteptat este diferit de starea curenta face click pe radio button
    // pentru a-si schimba starea
-
-
 
 
 public class RadioButtonsHelper extends PageObject {

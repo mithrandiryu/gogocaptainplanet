@@ -15,7 +15,7 @@ Feature: Radio Buttons
       | Male   | 15 - 50  | Sex : Male   | Age group: 15 - 50 |
       | Female | 0 - 5    | Sex : Female | Age group: 0 - 5   |
       | Female | 5 - 15   | Sex : Female | Age group: 5 - 15  |
-      | Female | 15 - 50  | Sex : Female | Age group: 15 - 50  |
+      | Female | 15 - 50  | Sex : Female | Age group: 15 - 50 |
 
 
 
