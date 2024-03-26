@@ -37,6 +37,12 @@ public class RadioButtonsPage extends PageObject {
     }
 
 
+    // In summary, this method is used to select a gender option in a
+    // user interface. It first attempts to find the index of the
+    // specified gender option and then clicks on the corresponding
+    // radio button if found. If the specified gender option is not found
+    // it prints a message indicating that to the console
+
     public void userSelectsSex(String gender) {
         int index = RadioButtonsHelper.getWebElementAttributeIndex(genderOptions, gender);
         if (index != -1) {

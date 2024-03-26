@@ -2,9 +2,6 @@ package com.tremend.practice.steps;
 
 import com.tremend.practice.tpages.RadioButtonsPage;
 import net.thucydides.core.annotations.Step;
-
-import java.util.regex.Pattern;
-
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class RadioButtonsSteps {

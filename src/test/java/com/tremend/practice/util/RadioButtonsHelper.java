@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.util.List;
-import java.util.stream.IntStream;
+
 
 
    // Metoda verifica atunci cand radio button trebuie sa fie bifat  avand valorile
